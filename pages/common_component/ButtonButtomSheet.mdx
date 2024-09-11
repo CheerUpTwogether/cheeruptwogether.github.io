@@ -1,0 +1,96 @@
+# ModalDefault
+
+### props
+| option | **description** | **type** | **required** | **default** |
+| --- | --- | --- | --- | --- |
+| `componet` | 내용이 들어갈 컴포넌트 | `boolean` | `false` | `false` |
+| `isShow` | 바텀시트 상태 값 | `booleaan` | `true` | `false`  |
+| `setIsShow` | 바텀시트 상태 변경 함수 | `func` | `true` | `false` |
+| buttons | 버튼 배열(1개 || 2개) → 취소는 기본값으로 포함되어있음 | array | true |  |
+
+<br/>
+
+### options
+
+```jsx
+import React from 'react';
+import {View, Text} from 'react-native';
+import {commonStyle} from '@/styles/common';
+
+const ButtonButtomSheetTest = () => {
+  const [moreShow, setMoreShow] = useState(false);
+	
+	const handleMorePress = (user: Friend) => {
+    setSelectedUser(user);
+    setMoreShow(true);
+  };
+
+	// 고정 event
+  const handleFixUser = () => {
+    console.log('TODO: 유저 고정 api 호출');
+    setMoreShow(false);
+  };
+
+	// 삭제 envent
+  const handleDeleteUser = () => {
+    console.log('TODO: 친구 삭제 모달 -> 삭제 api 호출');
+    setMoreShow(false);
+  };
+
+	// 전달할 버튼 배열
+  const createButtonList = () => {
+    const buttons: Array<{
+      text: string;
+      theme?: 'sub' | 'primary' | 'outline' | undefined;
+      onPress: () => void | Promise<void>;
+    }> = [
+      {
+        text: '고정',
+        onPress: handleFixUser,
+        theme: 'outline',
+      },
+      {
+        text: '삭제',
+        onPress: handleDeleteUser,
+      },
+    ];
+
+    return buttons;
+  };
+  
+  return (
+    <View style={commonStyle.container}>
+      <Text>TEST</Text>
+      
+      {/* 사용 */}
+       <ButtonBottomSheet
+          isShow={moreShow}
+          setIsShow={setMoreShow}
+          buttons={createButtonList()}
+        />
+    </View>
+  );
+};
+
+export default ButtonButtomSheetTest;
+
+```
+
+<br/>
+<figure><img width="493" alt="image" src="https://github.com/user-attachments/assets/d0aea704-0d6c-4b63-a16b-1c8160bebcae"/></figure>
+<br/>
+
+```jsx
+const buttons = [
+      {
+        text: '고정',
+        onPress: handleFixUser,
+        theme: 'outline', // 테마 조절 가능
+      }
+    ];
+
+```
+
+
+<br/>
+<figure><img width="493" alt="image" src="https://github.com/user-attachments/assets/4f078c97-f586-4c3f-be7f-561931a86e46"/></figure>

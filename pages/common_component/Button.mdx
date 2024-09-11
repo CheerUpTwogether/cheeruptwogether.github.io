@@ -1,0 +1,78 @@
+# Button
+
+### options
+| option | **description** | **type** | **required** | **default** |
+| --- | --- | --- | --- | --- |
+| `text` | 버튼 `text` | `string` | `true` |  |
+| `onPress` | 버튼 클릭 시 동작하는 메소드 | `function` | `true` |  |
+| `size` | 버튼 크기 | `full`<br/>`lg`<br/>`md`<br/>`sm` | `false` | `full` |
+| `theme` | 버튼 색상 | `primary`<br/>`sub`<br/>`outline` | `false` | `primary` |
+| `disable` | 버튼 disable 여부 | `boolean` | `false` | `false` |
+| `icon` | 버튼 아이콘 | `React.ReactNode` | `false` |  |
+| `style` | 버튼 스타일 | `object` | `object[]` | `false` |  |
+
+<br/>
+
+### example
+```jsx
+import React from 'react';
+import {View} from 'react-native';
+import {commonStyle} from '@/styles/common';
+import Button from '@/components/common/Button';
+import FriendsSvg from '@/assets/icons/addFriend.svg';
+import {ScrollView} from 'react-native-gesture-handler';
+
+const Home = () => {
+  return (
+    <ScrollView style={commonStyle.container}>
+      <Button text={'hello'} onPress={() => {}} />
+      <Button text={'hello'} onPress={() => {}} theme="sub" />
+      <Button text={'hello'} onPress={() => {}} theme="outline" />
+      <Button
+        text={'hello'}
+        onPress={() => {}}
+        theme="primary"
+        disable={true}
+      />
+      <Button
+        text={'hello'}
+        onPress={() => {}}
+        theme="outline"
+        disable={true}
+      />
+      <Button text={'hello'} onPress={() => {}} size="lg" />
+
+      <Button text={'hello'} onPress={() => {}} size="lg" theme="sub" />
+      <Button text={'hello'} onPress={() => {}} size="lg" theme="outline" />
+      <Button
+        text={'친구 추가'}
+        onPress={() => {}}
+        size="md"
+        icon={<FriendsSvg color={'#fff'} width={18} height={18} />}
+      />
+      <Button
+        text={'친구 추가'}
+        onPress={() => {}}
+        theme="sub"
+        size="md"
+        icon={<FriendsSvg color={'#777'} width={18} height={18} />}
+      />
+      <Button
+        text={'친구 추가'}
+        onPress={() => {}}
+        theme="outline"
+        size="md"
+        icon={<FriendsSvg color={'#ED423F'} width={18} height={18} />}
+      />
+
+      <Button text={'친구 추가'} onPress={() => {}} theme="outline" size="sm" />
+      <Button text={'친구 추가'} onPress={() => {}} size="sm" />
+      <Button text={'친구 추가'} onPress={() => {}} theme="sub" size="sm" />
+    </ScrollView>
+  );
+};
+
+export default Home;
+```
+
+<figure><img width="493" alt="image" src="https://github.com/user-attachments/assets/607f9ff0-9bbe-4df9-8aa0-68ce346fa561"/></figure>
