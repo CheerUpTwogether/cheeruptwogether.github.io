@@ -65,4 +65,4 @@ const Home = () => {
 export default Home;
 
 ```
-<img width="493" alt="image" src="https://github.com/user-attachments/assets/23edb543-9e18-498e-ac81-129a200d1cdd">
+<figure><img width="493" alt="image" src="https://github.com/user-attachments/assets/23edb543-9e18-498e-ac81-129a200d1cdd"/></figure>
