@@ -1,5 +1,7 @@
 export default {
-  docsRepositoryBase: 'https://github.com/CheerUpTwogether/piggyblog/tree/dev/pages'
-}
-
-
+  logo: <span>My Nextra Documentation</span>,
+  project: {
+    link: "https://github.com/shuding/nextra",
+  },
+  // ... other theme options
+};
