@@ -1,5 +1,5 @@
 export default {
-  docsRepositoryBase: 'https://github.com/CheerUpTwogether/piggyblog/dev/pages'
+  docsRepositoryBase: 'https://github.com/CheerUpTwogether/piggyblog/tree/dev/pages'
 }
 
 
