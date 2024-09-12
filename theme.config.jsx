@@ -3,6 +3,6 @@ export default {
   project: {
     link: "https://github.com/CheerUpTwogether/Piggy",
   },
-  docsRepositoryBase: 'https://github.com/CheerUpTwogether/cheeruptwogether.github.io',
+  //docsRepositoryBase: 'https://github.com/CheerUpTwogether/cheeruptwogether.github.io',
   // ... other theme options
 };
