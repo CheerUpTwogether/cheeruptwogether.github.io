@@ -1,0 +1,32 @@
+# BottomSheet
+
+### options
+
+| option       | **description**            | **type**          | **required** | **default** |
+| ------------ | -------------------------- | ----------------- | ------------ | ----------- |
+| `component`  | 내용이 들어갈 컴포넌트       | `ReactNode`       | `true`       | `null`      |
+| `isShow`     | 바텀시트 상태 값            | `boolean`         | `true`       | `false`     |
+| `setIsShow`  | 바텀시트 상태 변경 함수      | `function`        | `true`       | `undefined` |
+
+<br/>
+
+### example
+
+```js
+import React, { useState } from 'react';
+import { View, Text } from 'react-native';
+import { commonStyle } from '@/styles/common';
+
+const Home = () => {
+	const [isShow, setIsShow] = useState(false);
+
+  return (
+    <View style={commonStyle.container}>
+      <Text>home</Text>
+      <BottomSheet isShow={isShow} setIsShow={setIsShow} component={<Profile />} />
+    </View>
+  );
+};
+
+export default Home;
+```

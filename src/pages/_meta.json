@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Home",
+    "type": "page"
+  },
+  "project_proposal": {
+    "title": "기획서",
+    "type": "page"
+  }
+}
